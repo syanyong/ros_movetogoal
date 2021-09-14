@@ -1,8 +1,7 @@
-#!/usr/bin/env python
+#!/usr/bin/python3
 """
 http://wiki.ros.org/move_base
 http://wiki.ros.org/actionlib
-https://gist.github.com/xaxxontech/6cbfefd38208b9f8b153#file-single2dgoalsend-py-L11
 """
 import rospy
 import tf.transformations
@@ -51,11 +50,11 @@ class moveBaseAction():
         self.move_base_action.send_goal(goal)
         success = self.move_base_action.wait_for_result()
         state = self.move_base_action.get_state()
-        print "Move to %f, %f, %f ->" % (
+        print ("Move to %f, %f, %f ->" % (
             goal.target_pose.pose.position.x,
             goal.target_pose.pose.position.y,
             goal.target_pose.pose.orientation.z
-        ),
+        ))
         if success and state == GoalStatus.SUCCEEDED:
             print(" Complete")
             return True
