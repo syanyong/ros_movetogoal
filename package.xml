@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package format="2">
-    <name>turtlebot3_movetogoal</name>
+    <name>ros_movetogoal</name>
     <version>0.0.0</version>
     <description>The turtlebot3_movetogoal package</description>
 
